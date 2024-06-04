@@ -2,12 +2,20 @@
 
 public class ResponseErrorJson
 {
-    public string ErrorMessage { get; set; } = string.Empty;
+    public List<string> ErrorMessages { get; set; } = [];
 
     // Construtor, executa uma vez quando instancia uma classe, forçando sempre passar um error message
+
+    // quando chega um erro
     public ResponseErrorJson(string errorMessage)
     {
-        ErrorMessage = errorMessage;
+        ErrorMessages = [errorMessage];
+    }
+
+    // quando chega mais de 1 erro
+    public ResponseErrorJson(List<string> errorMessages)
+    {
+        ErrorMessages = errorMessages;
     }
 }
 
