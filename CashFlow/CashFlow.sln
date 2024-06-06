@@ -7,17 +7,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7D764CF5-1A6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{20D36206-8405-427C-B8CA-32A1C62E299D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlow.Api", "src\CashFlow.Api\CashFlow.Api.csproj", "{51DB8FE0-8CBB-4E27-B8AD-F3E9E2856949}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CashFlow.Api", "src\CashFlow.Api\CashFlow.Api.csproj", "{51DB8FE0-8CBB-4E27-B8AD-F3E9E2856949}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlow.Domain", "src\CashFlow.Domain\CashFlow.Domain.csproj", "{E653FD6D-CA76-47C3-83E8-0B328DE598AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CashFlow.Domain", "src\CashFlow.Domain\CashFlow.Domain.csproj", "{E653FD6D-CA76-47C3-83E8-0B328DE598AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlow.Application", "src\CashFlow.Application\CashFlow.Application.csproj", "{F59F4563-090E-46C3-A1A0-D2BF442A4CF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CashFlow.Application", "src\CashFlow.Application\CashFlow.Application.csproj", "{F59F4563-090E-46C3-A1A0-D2BF442A4CF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlow.Communication", "src\CashFlow.Communication\CashFlow.Communication.csproj", "{94D7D038-1186-41D1-802C-4D7206D6419A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CashFlow.Communication", "src\CashFlow.Communication\CashFlow.Communication.csproj", "{94D7D038-1186-41D1-802C-4D7206D6419A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlow.Exception", "src\CashFlow.Exeception\CashFlow.Exception.csproj", "{F52959EB-758C-475B-B1B8-BFEA66FCF6ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CashFlow.Exception", "src\CashFlow.Exeception\CashFlow.Exception.csproj", "{F52959EB-758C-475B-B1B8-BFEA66FCF6ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlow.Infraestructure", "src\CashFlow.Infraestructure\CashFlow.Infraestructure.csproj", "{608B5E6D-B14F-4F5E-A5F7-B223E8569DA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CashFlow.Infraestructure", "src\CashFlow.Infraestructure\CashFlow.Infraestructure.csproj", "{608B5E6D-B14F-4F5E-A5F7-B223E8569DA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validators.Tests", "tests\Validators.Tests\Validators.Tests.csproj", "{D9E7B74F-8F62-482E-B4CF-CD53906EB444}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{608B5E6D-B14F-4F5E-A5F7-B223E8569DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{608B5E6D-B14F-4F5E-A5F7-B223E8569DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{608B5E6D-B14F-4F5E-A5F7-B223E8569DA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9E7B74F-8F62-482E-B4CF-CD53906EB444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9E7B74F-8F62-482E-B4CF-CD53906EB444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9E7B74F-8F62-482E-B4CF-CD53906EB444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9E7B74F-8F62-482E-B4CF-CD53906EB444}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{94D7D038-1186-41D1-802C-4D7206D6419A} = {7D764CF5-1A61-4515-BACC-9B46115D186B}
 		{F52959EB-758C-475B-B1B8-BFEA66FCF6ED} = {7D764CF5-1A61-4515-BACC-9B46115D186B}
 		{608B5E6D-B14F-4F5E-A5F7-B223E8569DA0} = {7D764CF5-1A61-4515-BACC-9B46115D186B}
+		{D9E7B74F-8F62-482E-B4CF-CD53906EB444} = {20D36206-8405-427C-B8CA-32A1C62E299D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CE04F925-5E95-4F14-97DA-CA103296A714}
