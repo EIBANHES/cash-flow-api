@@ -11,14 +11,17 @@ namespace CashFlow.Api.Middleware
         }
         public async Task Invoke(HttpContext context)
         {
+            var supportedLanguages = CultureInfo.GetCultures(CultureTypes.AllCultures).ToList();
+
             //extrai o idioma do header
-            var culture = context.Request.Headers.AcceptLanguage.FirstOrDefault();
+            var requestedCulture = context.Request.Headers.AcceptLanguage.FirstOrDefault();
 
             var cultureInfo = new CultureInfo("en"); // linguagem padrao
 
-            if (string.IsNullOrWhiteSpace(culture) == false)
+            // tratativa para verificar se não é null e possui espaços em branco e se a linguagem existe 
+            if (string.IsNullOrWhiteSpace(requestedCulture) == false && supportedLanguages.Exists(language => language.Name.Equals(requestedCulture)))
             {
-                cultureInfo = new CultureInfo(culture);
+                cultureInfo = new CultureInfo(requestedCulture);
             }
             CultureInfo.CurrentCulture = cultureInfo;
             CultureInfo.CurrentUICulture = cultureInfo;
