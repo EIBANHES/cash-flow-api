@@ -2,7 +2,6 @@
 using CashFlow.Communication.Responses;
 using CashFlow.Domain.Entities;
 using CashFlow.Exception.ExceptionsBase;
-using CashFlow.Infraestructure.DataAccess;
 
 namespace CashFlow.Application.UseCases.Expenses.Register;
 
