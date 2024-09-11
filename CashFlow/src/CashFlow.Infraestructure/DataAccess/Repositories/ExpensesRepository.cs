@@ -21,8 +21,14 @@ namespace CashFlow.Infraestructure.DataAccess.Repositories
 
         public async Task<List<Expense>> GetAll()
         {
-           return await _dbContext.Expenses.ToListAsync();
+            // AsNoTracking, sempre antes de uma consulta, nao fica monitorando e n salva info em cache
+            return await _dbContext.Expenses.AsNoTracking().ToListAsync();
         }
+        public async Task<Expense?> GetById(long id)
+        {
+            return await _dbContext.Expenses.AsNoTracking().FirstOrDefaultAsync(e => e.Id == id);
+        }
+
 
     }
 }
