@@ -6,7 +6,9 @@ namespace CashFlow.Infraestructure.DataAccess
     internal class CashFlowDbContext : DbContext
     {
         // Obtem opções do dbcontext
-        public CashFlowDbContext(DbContextOptions options) : base(options){  }
+        public CashFlowDbContext(DbContextOptions options) : base(options)
+        {
+        }
 
         public DbSet<Expense> Expenses { get; set; }
     }

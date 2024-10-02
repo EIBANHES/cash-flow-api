@@ -11,11 +11,11 @@ namespace CashFlow.Application.UseCases.Expenses.Register;
 public class RegisterExpenseUseCase : IRegisterExpenseUseCase
 {
 
-    private readonly IExpensesRepository _repository; // altera o valor da propriedade apenas dentro do construtor (readonly)
+    private readonly IExpensesWriteOnlyRepository _repository; // altera o valor da propriedade apenas dentro do construtor (readonly)
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
     public RegisterExpenseUseCase(
-        IExpensesRepository repository,
+        IExpensesWriteOnlyRepository repository,
         IUnitOfWork unitOfWork,
         IMapper mapper)
     {
