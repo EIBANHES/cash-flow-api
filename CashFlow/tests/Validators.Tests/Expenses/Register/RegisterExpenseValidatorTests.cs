@@ -1,4 +1,4 @@
-﻿using CashFlow.Application.UseCases.Expenses.Register;
+﻿using CashFlow.Application.UseCases.Expenses;
 using CashFlow.Communication.Enums;
 using CashFlow.Exception;
 using CommonTestUtilities.Requests;
@@ -12,7 +12,7 @@ namespace Validators.Tests.Expenses.Register
         public void Success()
         {
             //Arrange, configura as instancias que precisa
-            var validator = new RegisterExpenseValidator();
+            var validator = new ExpenseValidator();
             var request = RequestRegisterExpenseJsonBuilder.Build();
             //Act
             var result = validator.Validate(request);
@@ -28,7 +28,7 @@ namespace Validators.Tests.Expenses.Register
         public void Error_Title_Empty(string title)
         {
             //Arrange, configura as instancias que precisa
-            var validator = new RegisterExpenseValidator();
+            var validator = new ExpenseValidator();
             var request = RequestRegisterExpenseJsonBuilder.Build();
             request.Title = title; // titulo invalido aq
 
@@ -44,7 +44,7 @@ namespace Validators.Tests.Expenses.Register
         public void Error_Date_Future()
         {
             //Arrange, configura as instancias que precisa
-            var validator = new RegisterExpenseValidator();
+            var validator = new ExpenseValidator();
             var request = RequestRegisterExpenseJsonBuilder.Build();
             request.Date = DateTime.UtcNow.AddDays(1); // data invalida aq
 
@@ -60,7 +60,7 @@ namespace Validators.Tests.Expenses.Register
         public void Error_Payment_Type_Invalid()
         {
             //Arrange, configura as instancias que precisa
-            var validator = new RegisterExpenseValidator();
+            var validator = new ExpenseValidator();
             var request = RequestRegisterExpenseJsonBuilder.Build();
             request.PaymentType = (PaymentType)700; // data invalida aq
 
@@ -80,7 +80,7 @@ namespace Validators.Tests.Expenses.Register
         public void Error_Amount_Invalid(decimal amount)
         {
             //Arrange, configura as instancias que precisa
-            var validator = new RegisterExpenseValidator();
+            var validator = new ExpenseValidator();
             var request = RequestRegisterExpenseJsonBuilder.Build();
             request.Amount = amount; // data invalida aq
 
