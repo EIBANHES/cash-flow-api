@@ -1,7 +1,5 @@
-﻿namespace CashFlow.Communication.Responses
+﻿namespace CashFlow.Communication.Responses;
+public class ResponseExpensesJson
 {
-    public class ResponseExpensesJson
-    {
-        public List<ResponseShortExpenseJson> Expenses { get; set; } = [];
-    }
+    public List<ResponseShortExpenseJson> Expenses { get; set; } = [];
 }

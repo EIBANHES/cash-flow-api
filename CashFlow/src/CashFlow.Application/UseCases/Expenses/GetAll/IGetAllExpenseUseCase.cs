@@ -1,9 +1,7 @@
 ﻿using CashFlow.Communication.Responses;
 
-namespace CashFlow.Application.UseCases.Expenses.GetAll
+namespace CashFlow.Application.UseCases.Expenses.GetAll;
+public interface IGetAllExpenseUseCase
 {
-    public interface IGetAllExpenseUseCase
-    {
-        Task<ResponseExpensesJson> Execute();
-    }
+    Task<ResponseExpensesJson> Execute();
 }

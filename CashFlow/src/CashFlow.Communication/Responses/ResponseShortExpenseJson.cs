@@ -1,9 +1,7 @@
-﻿namespace CashFlow.Communication.Responses
+﻿namespace CashFlow.Communication.Responses;
+public class ResponseShortExpenseJson
 {
-    public class ResponseShortExpenseJson
-    {
-        public long Id { get; set; }
-        public string Title { get; set; } = string.Empty;
-        public decimal Amount { get; set; }
-    }
+    public long Id { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public decimal Amount { get; set; }
 }
